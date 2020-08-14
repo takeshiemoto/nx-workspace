@@ -21,5 +21,16 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "next-redux": {
+      "tags": []
+    },
+    "next-redux-e2e": {
+      "tags": [],
+      "implicitDependencies": ["next-redux"]
+    },
+    "api": {
+      "tags": []
+    }
+  }
 }
