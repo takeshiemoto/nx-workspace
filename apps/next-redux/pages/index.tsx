@@ -136,7 +136,7 @@ export const Index = () => {
     fetch(`/api`)
       .then((res) => res.json())
       .then(setMessage);
-  });
+  }, []);
 
   /*
    * Replace the elements below with your own.
