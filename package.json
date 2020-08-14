@@ -33,7 +33,10 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-is": "16.13.1",
-    "styled-components": "5.1.1"
+    "styled-components": "5.1.1",
+    "@reduxjs/toolkit": "1.4.0",
+    "react-redux": "7.2.0",
+    "@types/react-redux": "7.1.9"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",

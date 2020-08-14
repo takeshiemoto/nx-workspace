@@ -31,6 +31,9 @@
     },
     "api": {
       "tags": []
+    },
+    "redux-lib": {
+      "tags": []
     }
   }
 }

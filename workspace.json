@@ -141,6 +141,52 @@
           }
         }
       }
+    },
+    "redux-lib": {
+      "root": "libs/redux-lib",
+      "sourceRoot": "libs/redux-lib/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/redux-lib/tsconfig.lib.json",
+              "libs/redux-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/redux-lib/**/*"]
+          }
+        },
+        "build": {
+          "builder": "@nrwl/web:package",
+          "options": {
+            "outputPath": "dist/libs/redux-lib",
+            "tsConfig": "libs/redux-lib/tsconfig.lib.json",
+            "project": "libs/redux-lib/package.json",
+            "entryFile": "libs/redux-lib/src/index.ts",
+            "external": ["react", "react-dom", "react-is", "styled-components"],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/redux-lib/jest.config.js",
+            "tsConfig": "libs/redux-lib/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
